@@ -22,7 +22,7 @@ function onFormSubmit(e) {
   var checkFile = DriveApp.getFileById('1fXfj1fxAhw6VnqS8ritkGM6DB9bZg'); // can be accessed via sharing link URL
   var podFile = DriveApp.getFileById('1NhKriNRlo1KHo4DJ_2wVVm7LL0v__');
   var disputeFile = DriveApp.getFileById('1GU6BryZWStPxxkpT2rVcZiEnuNXHT');
-  var ClaimFile = DriveApp.getFileById('1VC4sasYvF1klKcvHsHobP8SnMVFoD');
+  var claimFile = DriveApp.getFileById('1VC4sasYvF1klKcvHsHobP8SnMVFoD');
 
 
   var messageCheck = "Hi " + firstName + "," + "\n \nHere is the form for your check!";
@@ -81,7 +81,7 @@ function onFormSubmit(e) {
 
   } else if (emailType === "Claim Update") {
     GmailApp.sendEmail(customerEmail, subjectClaim, messageClaim, {
-      attachments: checkFile,
+      attachments: claimFile,
       from: aliases[3],
       name: 'Support',
       replyTo: aliases[3]
